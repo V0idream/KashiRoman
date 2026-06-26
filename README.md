@@ -1,19 +1,51 @@
-# KashiRoman
+<div align="center">
 
-<p align="center">
-  <a href="#中文"><kbd>🇨🇳 中文</kbd></a>
-  <a href="#english"><kbd>🇬🇧 English</kbd></a>
+# 🎤 KashiRoman
+
+### 面向 Windows 的本地日语歌词罗马音转换工具
+
+**Japanese Lyrics · Romaji Conversion · TXT / LRC / FLAC · Windows Desktop · Local Processing**
+
+<p>
+  <strong>语言</strong><br/>
+  <strong>简体中文</strong> ·
+  <a href="#english">English</a>
 </p>
+
+<p>
+  <strong>导航</strong><br/>
+  <a href="#项目简介">项目简介</a> ·
+  <a href="#示例">示例</a> ·
+  <a href="#主要功能">主要功能</a> ·
+  <a href="#下载">下载</a> ·
+  <a href="#从源码运行与构建">构建</a> ·
+  <a href="#许可证">许可证</a>
+</p>
+
+![Platform](https://img.shields.io/badge/Platform-Windows%20Desktop-111827)
+![Language](https://img.shields.io/badge/Language-Python-0F766E)
+![Input](https://img.shields.io/badge/Input-TXT%20%2F%20LRC%20%2F%20FLAC-1D4ED8)
+![Output](https://img.shields.io/badge/Output-Romaji%20Lyrics-FF5722)
+![License](https://img.shields.io/badge/License-GPL--3.0--or--later-7C3AED)
+![Release](https://img.shields.io/github/v/release/V0idream/KashiRoman?include_prereleases)
+
+</div>
+
+---
 
 <a id="中文"></a>
 
-## 中文
+<a id="项目简介"></a>
+
+## 📌 项目简介
 
 **KashiRoman** 是一款面向 Windows 的本地日语歌词罗马音转换工具。它可以将日语歌词中的假名与常见汉字读音转换为更易跟唱、校对和整理的罗马音，并尽量保留原歌词的分行结构。
 
 它支持 `.txt`、`.lrc` 和 `.flac` 文件。对于 FLAC 文件，KashiRoman 可以读取内嵌歌词标签，并导出写入新歌词标签的 FLAC 文件。KashiRoman 不会从音频中识别歌词，也不会进行语音识别。
 
-## 示例
+<a id="示例"></a>
+
+## 🧪 示例
 
 ```text
 Tell Me Tell Me
@@ -26,30 +58,38 @@ ka ga mi yo ka ga mi
 i chi ba n su ki na wa ta shi ni na ru no
 ```
 
-## 功能特点
+<a id="主要功能"></a>
 
-- 完全在 Windows 本地运行。
-- 将日语汉字、平假名和片假名歌词转换为罗马音。
-- 英文歌词行会作为原歌词保留，并同步保留在罗马音行中。
-- 可选择保留原歌词与翻译文本。
-- 能处理 `Tell Me Tell Me 告诉我 告诉我` 等常见混合行。
-- 导出 FLAC 歌词时保留原有歌词时间轴。
-- 桌面窗口支持拖放文件。
+## ✨ 主要功能
 
-## 下载
+* 完全在 Windows 本地运行。
+* 将日语汉字、平假名和片假名歌词转换为罗马音。
+* 英文歌词行会作为原歌词保留，并同步保留在罗马音行中。
+* 可选择保留原歌词与翻译文本。
+* 能处理 `Tell Me Tell Me 告诉我 告诉我` 等常见混合行。
+* 导出 FLAC 歌词时保留原有歌词时间轴。
+* 桌面窗口支持拖放文件。
 
-请在 `v1.0` Release 中下载 Windows 可执行文件：
+<a id="下载"></a>
+
+## 📦 下载
+
+请在 GitHub Releases 中下载 Windows 可执行文件：
 
 ```text
 KashiRoman-1.0-Windows.exe
 ```
 
-## 输出模式
+> 仓库链接和 Release 徽章已统一使用当前用户名 `V0idream`。
 
-- TXT/LRC 输入：导出 UTF-8 编码的 TXT 文件。
-- FLAC 输入：可导出 TXT 文件，或导出写入 `LYRICS` 与 `UNSYNCEDLYRICS` 标签的新 FLAC 文件。选择导出 FLAC 时，只生成新的 FLAC 文件，不额外生成 TXT 文件。
+## 📤 输出模式
 
-## 从源码运行与构建
+* TXT / LRC 输入：导出 UTF-8 编码的 TXT 文件。
+* FLAC 输入：可导出 TXT 文件，或导出写入 `LYRICS` 与 `UNSYNCEDLYRICS` 标签的新 FLAC 文件。选择导出 FLAC 时，只生成新的 FLAC 文件，不额外生成 TXT 文件。
+
+<a id="从源码运行与构建"></a>
+
+## 🛠️ 从源码运行与构建
 
 安装依赖：
 
@@ -69,11 +109,13 @@ python .\src\kashiroman.py
 python -m PyInstaller --onefile --windowed --collect-all tkinterdnd2 --name "KashiRoman" .\src\kashiroman.py
 ```
 
-## 说明
+## 📝 说明
 
 日语汉字读音由本地日语词典推断。常见歌词通常效果较好，但人名、地名、当字以及刻意使用的特殊读法仍建议人工复核。
 
-## 许可证
+<a id="许可证"></a>
+
+## 📜 许可证
 
 GPL-3.0-or-later.
 
@@ -102,17 +144,17 @@ i chi ba n su ki na wa ta shi ni na ru no
 
 ## Features
 
-- Runs fully locally on Windows.
-- Converts Japanese kanji, hiragana, and katakana lyrics into romaji.
-- Keeps English lyric lines as lyrics and preserves them in the romaji line.
-- Can optionally keep original lyrics and translations.
-- Handles common mixed lines such as `Tell Me Tell Me 告诉我 告诉我`.
-- Preserves line timing when exporting updated FLAC lyrics.
-- Supports drag and drop in the desktop window.
+* Runs fully locally on Windows.
+* Converts Japanese kanji, hiragana, and katakana lyrics into romaji.
+* Keeps English lyric lines as lyrics and preserves them in the romaji line.
+* Can optionally keep original lyrics and translations.
+* Handles common mixed lines such as `Tell Me Tell Me 告诉我 告诉我`.
+* Preserves line timing when exporting updated FLAC lyrics.
+* Supports drag and drop in the desktop window.
 
 ## Download
 
-Download the Windows executable from the `v1.0` release:
+Download the Windows executable from GitHub Releases:
 
 ```text
 KashiRoman-1.0-Windows.exe
@@ -120,8 +162,8 @@ KashiRoman-1.0-Windows.exe
 
 ## Output Modes
 
-- TXT/LRC input: exports a UTF-8 TXT file.
-- FLAC input: exports either a TXT file or a new FLAC file with updated `LYRICS` and `UNSYNCEDLYRICS` tags. When exporting FLAC, KashiRoman writes only the new FLAC file and does not create an additional TXT file.
+* TXT / LRC input: exports a UTF-8 TXT file.
+* FLAC input: exports either a TXT file or a new FLAC file with updated `LYRICS` and `UNSYNCEDLYRICS` tags. When exporting FLAC, KashiRoman writes only the new FLAC file and does not create an additional TXT file.
 
 ## Build From Source
 
